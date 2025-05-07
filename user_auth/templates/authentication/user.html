@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}User Profile{% endblock %}
+
+{% block content %}
+<div class="container my-4">
+    <h1 class="text-center my-4 display-4">Welcome, {{ username }}</h1>
+
+    <div class="card shadow-sm mx-auto" style="max-width: 400px;">
+        <div class="card-body">
+            <p class="text-center fs-5"><strong>First Name:</strong> {{ first_name }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
