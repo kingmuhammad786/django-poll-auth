@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Blog Posts</h1>
+
+<!-- Display blog posts dynamically -->
+<div>
+    {% for post in object_list %}
+        <div>
+            <h2>
+                <a href="{% url 'blog:detail' post.id %}">{{ post.title }}</a>
+            </h2>
+            <p>Published on {{ post.date|date:"Y-m-d" }}</p>
+        </div>
+        <hr>
+    {% empty %}
+        <!-- Show message when no blog posts are available -->
+        <p>No blog posts available. Check back later!</p>
+    {% endfor %}
+</div>
+{% endblock %}
+

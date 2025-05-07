@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Polls{% endblock %}
+
+{% block content %}
+<div class="container my-4">
+    <h1 class="text-center my-4 display-4">Polls</h1>
+
+    {% if latest_questions %}
+        <div class="card shadow-lg">
+            <div class="card-body">
+                <ul class="list-group">
+                    {% for question in latest_questions %}
+                        <li class="list-group-item">
+                            <a href="{% url 'polls:detail' question.id %}" 
+                               class="text-decoration-none text-primary">
+                                {{ question.question_text }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    {% else %}
+        <div class="alert alert-warning text-center mt-3">
+            No polls are available.
+        </div>
+    {% endif %}
+
+    <footer class="mt-5 text-center">
+        <p>&copy; 2025 Polls App. Built with Django and Bootstrap.</p>
+    </footer>
+</div>
+{% endblock %}
+
+
+

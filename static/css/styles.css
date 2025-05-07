@@ -1,0 +1,45 @@
+/* Reset some basic elements */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a full-page background image on the <body> */
+body {
+    /* Make sure this path is correct relative to your static folder */
+    background: url('/static/images/home_bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Optional: If you want a fallback background color */
+body {
+    background-color: #f4f4f4;
+}
+
+/* Example additional styles for your layout */
+header {
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Ensure your main container has some padding */
+.container {
+    padding: 20px;
+}
+

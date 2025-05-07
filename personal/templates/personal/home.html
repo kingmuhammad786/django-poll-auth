@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<section>
+    <h1>Welcome Home</h1>
+    <p>Explore the website and learn more about me!</p>
+
+    <nav>
+        <ul>
+            <li><a href="{% url 'home:about' %}">About</a></li>
+            <li><a href="{% url 'home:contact' %}">Contact</a></li>
+        </ul>
+    </nav>
+</section>
+{% endblock %}
+
+

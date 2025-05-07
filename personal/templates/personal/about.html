@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+<section class="container my-4">
+    <h1 class="display-4 text-center">About Me</h1>
+    <p class="lead text-center">
+        Welcome to my About page! Here, you’ll learn more about me, my journey, 
+        and what drives my passion for blogging.
+    </p>
+
+    <h2 class="mt-4">My Story</h2>
+    <p>
+        I’ve always been passionate about sharing ideas and creating meaningful 
+        discussions. This blog serves as a space for me to explore topics that 
+        matter.
+    </p>
+
+    <h2 class="mt-4">Get in Touch</h2>
+    <p>
+        Have questions or want to collaborate? Feel free to 
+        <a href="{% url 'personal:contact' %}">reach out here</a>.
+    </p>
+</section>
+{% endblock %}
+
+
